@@ -1,5 +1,5 @@
 'use client';
-import './navbar.css'
+import './navBar.css'
 export function Navbar() {
     return (
         <div className="navbar bg-transparent text-neutral-content" style={{ 
