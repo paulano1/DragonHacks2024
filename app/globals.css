@@ -17,16 +17,18 @@ html, body {
 
 /* Base font size */
 .responsive-heading {
-  font-size: 4rem; /* Default size */
+  font-size: 6.5rem; /* Default size */
 }
 
 .responsive-text {
-  font-size: 1rem; /* Default size */
+  font-size: 1.5rem; /* Default size */
 }
 
 .responsive-large-numbers {
   font-size: 15rem; /* Default size */
 }
+
+
 
 /* Medium screens */
 @media (max-width: 768px) {
@@ -43,8 +45,6 @@ html, body {
   }
 }
 
-/* Smaller screens */
-/* Smaller screens */
 @media (max-width: 480px) {
   .text-left {
     /* Adjust layout for smaller screens */

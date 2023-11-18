@@ -1,5 +1,10 @@
-'use client'
-import React, { useState, useEffect } from 'react';
+
+'use client';
+import React, { useState, useEffect, Dispatch, SetStateAction } from 'react';
+
+type Step = {
+    setLoading: Dispatch<SetStateAction<boolean>>
+}
 
 export default function FirstLoad() {
     const [currentStep, setCurrentStep] = useState(0);
@@ -13,21 +18,29 @@ export default function FirstLoad() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentStep((prevStep) => (prevStep < steps.length - 1 ? prevStep + 1 : prevStep));
-        }, 1000);
+            setCurrentStep((prevStep) => {
+                if (prevStep < steps.length - 1) {
+                    return prevStep + 1;
+                } else {
+                    clearInterval(interval); // Stop the interval when reaching the end
+                    return prevStep;
+                }
+            });
+        }, 800);
+
         return () => clearInterval(interval);
-    }, []);
+    }, [steps.length]);
 
     return (
         <div className="flex justify-center items-center h-screen">
-        <div className="w-2/5 mx-auto">
-        <div className="mockup-code">
-                {steps.slice(0, currentStep + 1).map((step, index) => (
-                    <pre key={index} data-prefix={step.prefix} className={step.className}>
-                        <code>{step.code}</code>
-                    </pre>
-                ))}
-            </div>
+            <div className="w-2/5 mx-auto">
+                <div className="mockup-code">
+                    {steps.slice(0, currentStep + 1).map((step, index) => (
+                        <pre key={index} data-prefix={step.prefix} className={step.className}>
+                            <code>{step.code}</code>
+                        </pre>
+                    ))}
+                </div>
             </div>
         </div>
     );
