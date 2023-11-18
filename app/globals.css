@@ -67,6 +67,8 @@ html, body {
 .tinted-image {
   filter: brightness(30%);
   transition: opacity 4s ease-in-out; /* Adjust the duration and easing as needed */
+  pointer-events: none; /* Disables clicking on the image */
+  user-select: none; /* Prevents text selection */
 }
 
 .fade-enter {
