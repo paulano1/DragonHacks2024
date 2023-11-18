@@ -17,9 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <nav>
-              <Navbar/>
-      </nav>
+      <head>
+        <title>Dragon Hacks 2024</title>
+        <meta name="description" content="Drexel Dragon Hack 2024, Welcome to 10th edition of Dragon Hacks, Register below!" />
+        <link rel="icon" href="/vercel.ico" />
+      </head>
+        <Navbar />
       <body className={inter.className}>{children}</body>
     </html>
   )
