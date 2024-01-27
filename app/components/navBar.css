@@ -1,4 +1,8 @@
-/* navbar.css */
+.blue-button {
+    background-color: blue; /* Idle color */
+    color: white; /* Text color */
+}
 
-
-  
+.blue-button:hover {
+    background-color: darkblue; /* Hover color */
+}

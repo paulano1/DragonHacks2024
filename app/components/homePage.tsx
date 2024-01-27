@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image'
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
@@ -44,10 +45,11 @@ export default function HomePage() {
               Interested in sponsoring?
               <a href="mailto:sponsor@dragonhacks.com" className="text-blue-500 underline">Contact us!</a>
             </p>
+            <Link href="/register">
             <button className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-lg px-6 py-3 text-center me-2 mb-2">
                 Apply
-                </button>
-
+            </button>
+            </Link>
           </div>
           <div className="absolute left-10 flex flex-col justify-center top-1/2 -translate-y-1/2 responsive-large-numbers leading-none font-bold opacity-60 z-10">
           <div>2</div>

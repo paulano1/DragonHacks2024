@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { Navbar } from './components/navBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,7 +21,7 @@ export default function RootLayout({
         <meta name="description" content="Drexel Dragon Hack 2024, Welcome to 10th edition of Dragon Hacks, Register below!" />
         <link rel="icon" href="/vercel.ico" />
       </head>
-        <Navbar />
+
       <body className={inter.className}>{children}</body>
     </html>
   )
