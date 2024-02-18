@@ -25,13 +25,14 @@
   
   .line {
     position: absolute;
-    width: 1px;
+    width: 4px;
     height: 100%;
     top: 0;
     left: 50%;
     background: rgba(255, 255, 255, 0.1);
     overflow: hidden;
     z-index: 0;
+
   }
   
   .line::after {
@@ -58,6 +59,12 @@
   
   .line:nth-child(3) {
     margin-left: 25%;
+  }
+  .line:nth-child(4) {
+    margin-left: 45%;
+  }
+  .line:nth-child(5) {
+    margin-left: -45%;
   }
   
   .line:nth-child(3)::after {

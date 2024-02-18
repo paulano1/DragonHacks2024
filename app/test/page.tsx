@@ -10,6 +10,9 @@ export function CrossAnimation({ children, disabled }: { children: React.ReactNo
             <div className={className}></div>
             <div className={className}></div>
             <div className={className}></div>
+            <div className={className}></div>
+            <div className={className}></div>
+            <div className={className}></div>
             {children}
         </div>
     );
