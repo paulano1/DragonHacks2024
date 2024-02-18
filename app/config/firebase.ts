@@ -1,19 +1,22 @@
 // firebase.ts
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD8CcQn8FouLkRa66Seu3oNCGfZE-Sq-Sg",
-  authDomain: "dragonhacks-c1b2f.firebaseapp.com",
-  projectId: "dragonhacks-c1b2f",
-  storageBucket: "dragonhacks-c1b2f.appspot.com",
-  messagingSenderId: "891440515076",
-  appId: "1:891440515076:web:5db5e9a4c8a3adf1ed0d51"
+  apiKey: "AIzaSyBJHRIJqZaEmMW0VGxNk34kWR4qidtz8n4",
+  authDomain: "dragonhacks-new.firebaseapp.com",
+  projectId: "dragonhacks-new",
+  storageBucket: "dragonhacks-new.appspot.com",
+  messagingSenderId: "215185242913",
+  appId: "1:215185242913:web:1512e29a9bd7148d261c60",
+  measurementId: "G-FH1J6Y2K53"
 };
 
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
+
 export default app;
