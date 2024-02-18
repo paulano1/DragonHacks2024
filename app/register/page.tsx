@@ -7,7 +7,7 @@ import app, { auth } from '../config/firebase';
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { redirect } from 'next/navigation';
-import CrossAnimation from '../test/page';
+import CrossAnimation from '../test/background';
 
 interface FileUploadProps {
   loginEmail: string;
@@ -206,7 +206,7 @@ const FileUpload: React.FC = () => {
              You must also agree to abide by the terms of the  MLH Contest Terms and Conditions.
               and the <a href='https://mlh.io/privacy' target="_blank" className="text-blue-500">MLH Privacy Policy</a>.
               Please note that you may receive pre and post-event informational e-mails and occasional messages about hackathons from MLH as per the MLH Privacy Policy.
-            Since Dragon Hacks is hosted at Drexel University, the rules detailed in <a href='https://drexel.edu/studentlife/community-standards' target="_blank" className="text-blue-500">Drexel University's Community Standards </a>
+            Since Dragon Hacks is hosted at Drexel University, the rules detailed in <a href='https://drexel.edu/studentlife/community-standards' target="_blank" className="text-blue-500">Drexel University{"'"}s Community Standards </a>
              take precedence for all things involving this hackathon.
               </p>
               <div className="mb-4">
