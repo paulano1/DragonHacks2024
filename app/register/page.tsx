@@ -178,7 +178,7 @@ const FileUpload: React.FC = () => {
   };
 
   return (
-    <CrossAnimation disabled={!disabled}>
+    <CrossAnimation disabled={disabled}>
     <div className="flex items-center justify-center h-screen ">
     <div className="p-12 bg-white shadow-lg rounded-lg w-1/2 bg-gray-100 z-10 mt-2 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-10 2xl:mt-12 overflow-auto max-h-[80%]">
           <h2 className="mb-6 text-center text-3xl font-extrabold">Registration is currently open</h2>
@@ -249,7 +249,7 @@ const FileUpload: React.FC = () => {
             </div>
           <div className="mb-4">
               <label htmlFor="loginEmail" className="block mb-2 text-sm font-medium text-gray-900">Full Name</label>
-              <input type="email" id="loginEmail" className="input input-bordered w-full" required
+              <input type="email" id="loginEmail" className="input input-bordered w-full bg-white" required
                 value={formDetails.name} onChange={(e) => setFormDetails({
                   ...formDetails,
                   name: e.target.value
@@ -257,7 +257,7 @@ const FileUpload: React.FC = () => {
             </div>
             <div className="mb-4">
               <label htmlFor="loginEmail" className="block mb-2 text-sm font-medium text-gray-900">Login Email</label>
-              <input type="email" id="loginEmail" className="input input-bordered w-full" required
+              <input type="email" id="loginEmail" className="input input-bordered w-full bg-white" required
                 value={formDetails.loginEmail} onChange={(e) => setFormDetails({
                   ...formDetails,
                   loginEmail: e.target.value
@@ -265,7 +265,7 @@ const FileUpload: React.FC = () => {
             </div>
             <div className="mb-4">
               <label htmlFor="notificationEmail" className="block mb-2 text-sm font-medium text-gray-900">Notification Email (.edu Email)</label>
-              <input type="email" id="notificationEmail" className="input input-bordered w-full" required
+              <input type="email" id="notificationEmail" className="input input-bordered w-full bg-white" required
                 value={formDetails.notificationEmail} onChange={(e) => setFormDetails({
                   ...formDetails,
                   notificationEmail: e.target.value
@@ -273,7 +273,7 @@ const FileUpload: React.FC = () => {
             </div>
             <div className="mb-4">
               <label htmlFor="dob" className="block mb-2 text-sm font-medium text-gray-900">Date of Birth</label>
-              <input type="date" id="dob" className="input input-bordered w-full" required
+              <input type="date" id="dob" className="input input-bordered w-full bg-white" required
                 value={formDetails.dateOfBirth} onChange={(e) => setFormDetails({
                   ...formDetails,
                   dateOfBirth: e.target.value
@@ -281,7 +281,7 @@ const FileUpload: React.FC = () => {
             </div>
             <div className="mb-4">
               <label htmlFor="dob" className="block mb-2 text-sm font-medium text-gray-900">T-shirt size</label>
-              <select id="dob" className="input input-bordered w-full" required
+              <select id="dob" className="input input-bordered w-full bg-white" required
                 value={formDetails.TshirtSize} onChange={(e) => setFormDetails({
                   ...formDetails,
                   TshirtSize: e.target.value
@@ -293,7 +293,7 @@ const FileUpload: React.FC = () => {
             </div>
             <div className="mb-4">
               <label htmlFor="dob" className="block mb-2 text-sm font-medium text-gray-900">Phone number</label>
-              <input type="number" id="dob" className="input input-bordered w-full" required
+              <input type="number" id="dob" className="input input-bordered w-full bg-white" required
                 value={formDetails.phone} onChange={(e) => setFormDetails({
                   ...formDetails,
                   phone: e.target.value
@@ -301,7 +301,7 @@ const FileUpload: React.FC = () => {
             </div>
             <div className="mb-4">
               <label htmlFor="dob" className="block mb-2 text-sm font-medium text-gray-900">class year</label>
-              <select id="dob" className="input input-bordered w-full" required
+              <select id="dob" className="input input-bordered w-full bg-white" required
                 value={formDetails.classYear} onChange={(e) => setFormDetails({
                   ...formDetails,
                   classYear: e.target.value
@@ -313,7 +313,7 @@ const FileUpload: React.FC = () => {
             </div>
             <div className="mb-4">
               <label htmlFor="dob" className="block mb-2 text-sm font-medium text-gray-900">Areas of interest</label>
-              <select id="dob" className="input input-bordered w-full" required
+              <select id="dob" className="input input-bordered w-full bg-white" required
                 value={formDetails.classYear} onChange={(e) => setFormDetails({
                   ...formDetails,
                   areasOfInterest: e.target.value
@@ -325,7 +325,7 @@ const FileUpload: React.FC = () => {
             </div>
             <div className="mb-4">
               <label htmlFor="university" className="block mb-2 text-sm font-medium text-gray-900">University</label>
-              <input type="text" id="university" className="input input-bordered w-full" required
+              <input type="text" id="university" className="input input-bordered w-full bg-white" required
                 value={formDetails.university} onChange={(e) => setFormDetails({
                   ...formDetails,
                   university: e.target.value
@@ -333,7 +333,7 @@ const FileUpload: React.FC = () => {
             </div>
             <div className="mb-4">
               <p className="mb-2 text-sm font-medium text-gray-900">How comfortable are you with hackathons?</p>
-              <select id="exp" className="input input-bordered w-full" required value={formDetails.hackathonExperience} onChange={(e) => setFormDetails({
+              <select id="exp" className="input input-bordered w-full bg-white" required value={formDetails.hackathonExperience} onChange={(e) => setFormDetails({
                 ...formDetails,
                 hackathonExperience: e.target.value
               })}>
@@ -359,7 +359,7 @@ const FileUpload: React.FC = () => {
             </div>
             <div className="mb-6">
             <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900">Your password</label>
-            <input type="password" id="password" className="input input-bordered w-full" required
+            <input type="password" id="password" className="input input-bordered w-full bg-white" required
               value={formDetails.password} onChange={(e) => setFormDetails({
                 ...formDetails,
                 password: e.target.value
@@ -367,7 +367,7 @@ const FileUpload: React.FC = () => {
           </div>
           <div className="mb-6">
             <label htmlFor="confirmPassword" className="block mb-2 text-sm font-medium text-gray-900">Confirm password</label>
-            <input type="password" id="confirmPassword" className="input input-bordered w-full" required
+            <input type="password" id="confirmPassword" className="input input-bordered w-full bg-white" required
               value={formDetails.confirmPassword} onChange={(e) => setFormDetails({
                 ...formDetails,
                 confirmPassword: e.target.value
