@@ -52,6 +52,9 @@ export default function LayoutGridApp() {
           <li>📅 Date: April </li>
           <li>📍 Location: Bossone Engineering Building, Drexel</li>
         </ul>
+        <h2 className="relative z-10 text-sm md:text-2xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
+        Prizes and Tracks to be annonced soon! Stay tuned!
+        </h2>
 
       </div>
     </div>
