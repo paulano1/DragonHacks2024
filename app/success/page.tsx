@@ -1,50 +1,20 @@
-'use client';
-import React from 'react';
-import './style.css';
+"use client";
+import React from "react";
+import { Boxes } from "../ui/background.-boxes";
+import { cn } from "@/lib/utils";
 
-const Sides: React.FC = () => (
-  <>
-    <div className="side"></div>
-    <div className="side"></div>
-    <div className="side"></div>
-    <div className="side"></div>
-    <div className="side"></div>
-    <div className="side"></div>
-  </>
-);
-
-const Cuboid: React.FC<{ type: string; index: number }> = ({ type, index }) => (
-  <div className={`cuboid ${type}-${index}`}>
-    <Sides />
-  </div>
-);
-
-const NumberCuboids: React.FC<{ type: string; count: number }> = ({ type, count }) => (
-  <>
-    {Array.from({ length: count }, (_, i) => (
-      <Cuboid key={i} type={type} index={i + 1} />
-    ))}
-  </>
-);
-
-const CubeNumberDisplay: React.FC = () => {
- const onClick = () => {
-    window.location.href = '/';
-  }
+export default function BackgroundBoxesDemo() {
   return (
-    <div className="content">
-  <div className="wrapper-1">
-    <div className="wrapper-2">
-      <h1>Thank you !</h1>
-      <p>Thanks for registering for Dragon Hacks 2024  </p>
-      <p>We are excited to host you at Drexel, expect more communications soon!  </p>
-      <button className="go-home" onClick={onClick}>
-      go home
-      </button>
-    </div>
-</div>
-</div>
-  );
-};
+    <div className="h-screen relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
+      <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
 
-export default CubeNumberDisplay;
+      <Boxes />
+      <h1 className={cn("md:text-4xl text-xl text-white relative z-20")}>
+        Thanks for register
+      </h1>
+      <p className="text-center mt-2 text-neutral-300 relative z-20">
+        We are excited to have you at Dragon Hacks 2024
+      </p>
+    </div>
+  );
+}
