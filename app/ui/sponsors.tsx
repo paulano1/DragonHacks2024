@@ -61,6 +61,17 @@ const Pennoni = () => (
   </div>
 );
 
+const CollegeOfEngineering = () => (
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
+    <img
+        src="https://drexel.edu/~/media/Images/engineering/news/0-news.ashx?h=400&la=en&w=600&hash=7066625FCD924D63A0DC6C92D331CD31970F3B26"
+        alt="placeholder"
+        className="rounded-xl"
+        />
+
+  </div>
+);
+
 const items = [
   {
     title: "IEEE Philadelphia Section",
@@ -75,8 +86,8 @@ const items = [
   },
   
   {
-    title: "The Power of Communication",
-    header: <Pennoni />,
+    title: "Drexel College of Engineering",
+    header: <CollegeOfEngineering/>,
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   }
 ];
