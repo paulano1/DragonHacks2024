@@ -6,7 +6,7 @@ import { FloatingNavbar } from "../ui/navbar";
 import Faq from "../ui/accordian";
 import { Sponsors } from "../ui/sponsors";
 
-export default function LayoutGridDemo() {
+export default function LayoutGridApp() {
   return (
     <FloatingNavbar>
     <div className="h-screen py-20 w-full ">
