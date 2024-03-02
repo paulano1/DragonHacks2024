@@ -14,7 +14,7 @@ export default function Faq() {
 
   return (
     <LampContainer>
-    <Accordion type="single" collapsible className="w-full text-white">
+    <Accordion type="single" collapsible className="w-full text-white max-w-3xl">
       <AccordionItem value="item-1">
         <AccordionTrigger>What is a Hackathon?</AccordionTrigger>
         <AccordionContent>
@@ -44,12 +44,12 @@ export default function Faq() {
         Dragon hacks abides by the MLH Code of Conduct, and the Drexel code of conduct. Every Dragon Hacks applicant must agree to this Code of Conduct to be considered for admission. Dragon Hacks is a safe place where everyone is welcome ❤️.
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-4">
+      <AccordionItem value="item-5">
         <AccordionTrigger>What if I don&apos;t know how to code?</AccordionTrigger>
         <AccordionContent>
         Dragon Hacks is the perfect time and place to learn. We provide starter code “hack packs” on our github as well as beginner-friendly workshops and mentors to help you build something you can be proud of.        </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-4">
+      <AccordionItem value="item-6">
         <AccordionTrigger>What if I don&apos;t have a team or idea?</AccordionTrigger>
         <AccordionContent>
         Many of our hackers don&apos;t have a team coming in, and find them at the event!  We have a ton of team-forming activities to help you find teammates and idea brainstorming sessions for all our tracks.        </AccordionContent>
