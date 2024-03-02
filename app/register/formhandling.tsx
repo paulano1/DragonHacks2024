@@ -334,7 +334,7 @@ export default function InputForm() {
             <FormItem>
               <FormLabel>Email ID</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input placeholder="abc@drexel.edu" {...field} />
               </FormControl>
               <FormDescription>
                 We will communicate with you over this email
@@ -350,7 +350,7 @@ export default function InputForm() {
             <FormItem>
               <FormLabel>Password</FormLabel>
               <FormControl>
-                <Input type="password" placeholder="shadcn" {...field} />
+                <Input type="password" placeholder="IdontRepeatPasswords" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
