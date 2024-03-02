@@ -253,7 +253,9 @@ import { Calendar } from "@/components/ui/calendar"
 import { CalendarIcon } from "@radix-ui/react-icons"
 import { format } from "date-fns"
 import { cn } from "../utils/cn"
-
+import { useState } from "react";
+import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
+const ACCEPTED_PDF_FILE_TYPES = ["application/pdf"]; // Now focused on PDFs
 const FormSchema = z.object({
   email: z.string({
               required_error: "A date of birth is required.",
@@ -272,13 +274,17 @@ const FormSchema = z.object({
           }),
   graduationDate: z.date({
             required_error: "A date of birth is required.",
-          })
-
+          }),
+  
+  file : z.any(),
     
 })
 
 export default function InputForm() {
+  const [file, setFile] = useState<File | null>(null)
   const firestore = getFirestore(app);
+  const storage = getStorage(app);
+  
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -294,6 +300,13 @@ export default function InputForm() {
     if (userCredential) {
       try{
       const db = getFirestore(app);
+      if (file) {
+        const fileRef = ref(storage, `cvs/${userCredential.user.uid}/${file.name}`);
+        const fileSnapshot = await uploadBytes(fileRef, file);
+        const url = await getDownloadURL(fileRef);
+        console.log('File uploaded to: ', url);
+      }
+      
       addDoc(collection(firestore, userCredential.user.uid), {
         dob: data.dob,
         graduationDate: data.graduationDate,
@@ -327,7 +340,7 @@ export default function InputForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>Email ID</FormLabel>
               <FormControl>
                 <Input placeholder="shadcn" {...field} />
               </FormControl>
@@ -433,6 +446,29 @@ export default function InputForm() {
             </FormItem>
           )}
         />
+        <FormField
+          control={form.control}
+          name="file"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Upload your resume</FormLabel>
+              <FormControl>
+                <Input type="file" accept={ACCEPTED_PDF_FILE_TYPES.join(",")} onChange={(e) => {
+                  if (e.target.files && e.target.files[0]) {
+                    setFile(e.target.files[0])
+                    field.onChange(e)
+                  }
+                }} />
+              </FormControl>
+              <FormDescription>
+                We will communicate with you over this email
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        
         
         <Button type="submit">Submit</Button>
       </form>
