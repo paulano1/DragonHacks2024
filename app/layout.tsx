@@ -16,6 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta http-equiv="refresh" content="0;URL='https://dragonhacks.org/'" />   
       <body className={inter.className}>{children}</body>
     </html>
   );
